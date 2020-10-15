@@ -31,7 +31,6 @@ type Stats struct {
 	PercentageChange7D  float64 `json:"percent_change_7d"`
 }
 
-
 func init() {
 	getIdMapping()
 }
@@ -113,6 +112,7 @@ func getIdMapping() {
 
 	if err != nil {
 		fmt.Println(err)
+		return
 	}
 
 	defer func() {
